@@ -1,14 +1,15 @@
 # resistor_calculator
-resistor_calculator is a simple excercise I did to learn Rust. It takes a list of integers separated by a space as resistance values and calculate the parallel.
-Anything that is not an integer will prompt an error (yes, floats are not allowed). The program will run until a correct list of integers is given, when it calculates the parallel it stops.
+
+resistor_calculator is a simple excercise I did to learn Rust. It takes a circuit of parallels and series of resistances, listed as numbers separated by a space.
+The program will calculate the equivalent resistance of the circuit computing parallels and series, even nested.
 
 ```
-write a list of resistor values separated by a space
-500 600g
-error: invalid digit found in string
-write a list of resistor values separated by a space
-500 500
-The parallel of [500, 500] is 250 Ω
+write a circuit of resistor values separated by a space
+s(100 200 p(200 200) 300 p(470 230))
+The resistance of s(100 200 p(200 200) 300 p(470 230))
+ is 854.4286 Ω
 ```
 
-I would like to add series and parallels combination in the future.
+If the circuit is not valid for any reason (parenthesis, pattern different from s(...) or p(...)) the program will stop and display an error.
+
+It is written really bad, I know, but it's the first tool I've ever wrote till the end and I'm so happy.
